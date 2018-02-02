@@ -23,9 +23,6 @@ public class UserEntity {
     @Column(name = "password")
     private String password;
 
-//    @ManyToMany
-//    @Column(name = "user_id")
-//    private List<Long> userId;
     //TODO How to connect users
 
     public Long getId() {
@@ -68,11 +65,4 @@ public class UserEntity {
         this.password = password;
     }
 
-//    public List<Long> getUserId() {
-//        return userId;
-//    }
-//
-//    public void setUserId(List<Long> userId) {
-//        this.userId = userId;
-//    }
 }

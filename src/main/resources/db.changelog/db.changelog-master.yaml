@@ -33,6 +33,4 @@
                    type: varchar(100)
                    constraints:
                      nullable: false
-               - column:
-                   name: user_id
-                   type: bigint
+

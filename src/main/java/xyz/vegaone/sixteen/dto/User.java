@@ -14,7 +14,7 @@ public class User {
 
     private String password;
 
-    private List<Long> userId;
+    private List<Post> postList;
 
     public Long getId() {
         return id;
@@ -56,11 +56,11 @@ public class User {
         this.password = password;
     }
 
-    public List<Long> getUserId() {
-        return userId;
+    public List<Post> getPostList() {
+        return postList;
     }
 
-    public void setUserId(List<Long> userId) {
-        this.userId = userId;
+    public void setPostList(List<Post> postList) {
+        this.postList = postList;
     }
 }

@@ -33,4 +33,37 @@
                    type: varchar(100)
                    constraints:
                      nullable: false
-
+   - changeSet:
+       id: 2
+       author: Bogdan
+       changes:
+         - createTable:
+             tableName: post
+             columns:
+               - column:
+                   name: id
+                   type: bigint
+                   autoIncrement: true
+                   constraints:
+                     primaryKey: true
+                     nullable: false
+               - column:
+                   name: creation_date
+                   type: date
+                   constraints:
+                     nullable: false
+               - column:
+                   name: content
+                   type: varchar(1500)
+                   constraints:
+                     nullable: false
+   - changeSet:
+           id: 3
+           author: Bogdan
+           changes:
+             - addColumn:
+                tableName: post
+                columns:
+                  - column:
+                      name: user_id
+                      type: bigint

@@ -1,16 +1,13 @@
 package xyz.vegaone.sixteen.dto;
 
 
-import xyz.vegaone.sixteen.domain.UserEntity;
-
 import java.util.Date;
-import java.util.List;
 
 public class Post {
 
     private Long id;
 
-    private Date creation_Date;
+    private Date creationDate;
 
     private String content;
 
@@ -29,12 +26,12 @@ public class Post {
         this.id = id;
     }
 
-    public Date getCreation_Date() {
-        return creation_Date;
+    public Date getCreationDate() {
+        return creationDate;
     }
 
-    public void setCreation_Date(Date creation_Date) {
-        this.creation_Date = creation_Date;
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
     }
 
     public String getContent() {

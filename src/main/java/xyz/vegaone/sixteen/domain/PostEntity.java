@@ -17,7 +17,7 @@ public class PostEntity {
     private UserEntity user;
 
     @Column(name = "creation_date")
-    private Date creation_Date;
+    private Date creationDate;
 
     @Column(name = "content")
     private String content;
@@ -43,12 +43,12 @@ public class PostEntity {
         this.user = user;
     }
 
-    public Date getCreation_Date() {
-        return creation_Date;
+    public Date getCreationDate() {
+        return creationDate;
     }
 
-    public void setCreation_Date(Date creation_Date) {
-        this.creation_Date = creation_Date;
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
     }
 
     public String getContent() {

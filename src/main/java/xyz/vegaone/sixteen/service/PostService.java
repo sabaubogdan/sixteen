@@ -24,7 +24,7 @@ public class PostService {
 
     public Post createPost(Post post) {
         PostEntity postEntity = postMapper.dtoToDomain(post);
-        postEntity.setCreation_Date(new Date());
+        postEntity.setCreationDate(new Date());
         PostEntity savedPostEntity = postRepo.save(postEntity);
 
         return postMapper.domainToDto(savedPostEntity);

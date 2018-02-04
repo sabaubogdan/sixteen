@@ -24,7 +24,7 @@ public class UserEntity {
     @Column(name = "password")
     private String password;
 
-    @OneToMany(mappedBy = "user") //removing a user will remove also the post
+    @OneToMany(mappedBy = "user")
     private List<PostEntity> postList;
 
     //TODO How to connect users

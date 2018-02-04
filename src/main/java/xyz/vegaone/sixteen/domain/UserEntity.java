@@ -1,6 +1,7 @@
 package xyz.vegaone.sixteen.domain;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
@@ -22,6 +23,9 @@ public class UserEntity {
 
     @Column(name = "password")
     private String password;
+
+    @OneToMany(mappedBy = "user")
+    private List<PostEntity> postList;
 
     //TODO How to connect users
 
@@ -65,4 +69,11 @@ public class UserEntity {
         this.password = password;
     }
 
+    public List<PostEntity> getPostEntityList() {
+        return postList;
+    }
+
+    public void setPostEntityList(List<PostEntity> postList) {
+        this.postList = postList;
+    }
 }

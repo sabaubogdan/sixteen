@@ -67,9 +67,8 @@ public class CommentServiceTest {
         Comment updateComment = commentService.updateComment(comment);
 
         //then
-        //then
-        Assert.assertNotNull("There should have been one comment saved in the database", comment);
-        Assert.assertEquals("The comment should have matched", NEW_COMMENT, comment.getContent());
+        Assert.assertNotNull("There should have been one comment saved in the database", updateComment);
+        Assert.assertEquals("The comment should have matched", NEW_COMMENT, updateComment.getContent());
     }
 
 

@@ -27,6 +27,9 @@ public class UserEntity {
     @OneToMany(mappedBy = "user")
     private List<PostEntity> postList;
 
+    @OneToMany(mappedBy = "userPost")
+    private List<CommentEntity> commentList;
+
     //TODO How to connect users
 
     public Long getId() {

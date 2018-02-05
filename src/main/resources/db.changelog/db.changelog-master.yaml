@@ -67,3 +67,33 @@
                   - column:
                       name: user_id
                       type: bigint
+   - changeSet:
+       id: 4
+       author: Bogdan
+       changes:
+         - createTable:
+             tableName: comment
+             columns:
+               - column:
+                   name: id
+                   type: bigint
+                   autoIncrement: true
+                   constraints:
+                     primaryKey: true
+                     nullable: false
+               - column:
+                   name: post_id
+                   type: bigint
+               - column:
+                   name: user_id
+                   type: bigint
+               - column:
+                   name: creation_date
+                   type: date
+                   constraints:
+                     nullable: false
+               - column:
+                   name: content
+                   type: varchar(1500)
+                   constraints:
+                     nullable: false

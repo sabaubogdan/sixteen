@@ -2,11 +2,10 @@ package xyz.vegaone.sixteen.domain;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 
 @Entity
-@Table(name = "post")
-public class PostEntity {
+@Table(name = "comment")
+public class CommentEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,8 +13,12 @@ public class PostEntity {
     private Long id;
 
     @ManyToOne
+    @JoinColumn(name = "post_id")
+    private PostEntity post;
+
+    @ManyToOne
     @JoinColumn(name = "user_id")
-    private UserEntity user;
+    private UserEntity userPost;
 
     @Column(name = "creation_date")
     private Date creationDate;
@@ -23,10 +26,7 @@ public class PostEntity {
     @Column(name = "content")
     private String content;
 
-//    private List<Like> likes;  to be added after the classes are added
-
-    @OneToMany(mappedBy = "post")
-    private List<CommentEntity> commentList;
+    //TODO connect to like
 
 
     public Long getId() {
@@ -37,12 +37,20 @@ public class PostEntity {
         this.id = id;
     }
 
-    public UserEntity getUser() {
-        return user;
+    public PostEntity getPost() {
+        return post;
     }
 
-    public void setUser(UserEntity user) {
-        this.user = user;
+    public void setPost(PostEntity post) {
+        this.post = post;
+    }
+
+    public UserEntity getUserPost() {
+        return userPost;
+    }
+
+    public void setUserPost(UserEntity userPost) {
+        this.userPost = userPost;
     }
 
     public Date getCreationDate() {
@@ -59,13 +67,5 @@ public class PostEntity {
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    public List<CommentEntity> getCommentList() {
-        return commentList;
-    }
-
-    public void setCommentList(List<CommentEntity> commentList) {
-        this.commentList = commentList;
     }
 }

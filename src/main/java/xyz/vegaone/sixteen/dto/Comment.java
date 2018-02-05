@@ -1,23 +1,20 @@
 package xyz.vegaone.sixteen.dto;
 
+import javafx.geometry.Pos;
 
 import java.util.Date;
-import java.util.List;
 
-public class Post {
+public class Comment {
 
     private Long id;
+
+    private Post post;
+
+    private User user;
 
     private Date creationDate;
 
     private String content;
-
-    private User user;
-
-//    private List<Like> likes; to be added after the classes are created
-
-    private List<Comment> comments;
-
 
     public Long getId() {
         return id;
@@ -25,6 +22,22 @@ public class Post {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Post getPost() {
+        return post;
+    }
+
+    public void setPost(Post post) {
+        this.post = post;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Date getCreationDate() {
@@ -41,13 +54,5 @@ public class Post {
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 }

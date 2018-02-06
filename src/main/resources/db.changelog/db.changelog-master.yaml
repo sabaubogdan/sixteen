@@ -97,3 +97,31 @@
                    type: varchar(1500)
                    constraints:
                      nullable: false
+   - changeSet:
+       id: 5
+       author: Bogdan
+       changes:
+         - createTable:
+             tableName: like_table
+             columns:
+               - column:
+                   name: id
+                   type: bigint
+                   autoIncrement: true
+                   constraints:
+                     primaryKey: true
+                     nullable: false
+               - column:
+                   name: user_id
+                   type: bigint
+               - column:
+                   name: post_id
+                   type: bigint
+               - column:
+                   name: comment_id
+                   type: bigint
+               - column:
+                   name: creation_date
+                   type: date
+                   constraints:
+                     nullable: false

@@ -21,7 +21,7 @@ public class SixteenConfig {
                 .create()
                 .username("sa")
                 .password("")
-                .url("jdbc:h2:mem:easytrack")
+                .url("jdbc:h2:mem:easytrack;DB_CLOSE_ON_EXIT=FALSE")
                 .build();
 
     }

@@ -55,7 +55,6 @@ public class LikeServiceTest {
         //then
         Assert.assertNull("There should have been one like deleted from database", likeService.getLike(savedLike.getId()));
 
-
     }
 
 }

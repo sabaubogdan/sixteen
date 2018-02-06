@@ -27,7 +27,6 @@ public class LikeEntity {
     @JoinColumn(name = "comment_id")
     private CommentEntity commentLike;
 
-
     public Long getId() {
         return id;
     }

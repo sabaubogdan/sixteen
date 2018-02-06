@@ -12,7 +12,6 @@ public class LikeController {
 
     private LikeService likeService;
 
-    @Autowired
     public LikeController(LikeService likeService) {
         this.likeService = likeService;
     }

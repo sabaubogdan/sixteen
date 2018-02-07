@@ -23,7 +23,8 @@ public class PostEntity {
     @Column(name = "content")
     private String content;
 
-//    private List<Like> likes;  to be added after the classes are added
+    @OneToMany(mappedBy = "postLike")
+    private List<LikeEntity> likes;
 
     @OneToMany(mappedBy = "post")
     private List<CommentEntity> commentList;
@@ -67,5 +68,13 @@ public class PostEntity {
 
     public void setCommentList(List<CommentEntity> commentList) {
         this.commentList = commentList;
+    }
+
+    public List<LikeEntity> getLikes() {
+        return likes;
+    }
+
+    public void setLikes(List<LikeEntity> likes) {
+        this.likes = likes;
     }
 }

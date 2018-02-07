@@ -1,23 +1,18 @@
 package xyz.vegaone.sixteen.dto;
 
-
 import java.util.Date;
-import java.util.List;
 
-public class Post {
+public class Like {
 
     private Long id;
 
     private Date creationDate;
 
-    private String content;
-
     private User user;
 
-    private List<Like> likes;
+    private Post post;
 
-    private List<Comment> comments;
-
+    private Comment comment;
 
     public Long getId() {
         return id;
@@ -35,19 +30,27 @@ public class Post {
         this.creationDate = creationDate;
     }
 
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
     public User getUser() {
         return user;
     }
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public Post getPost() {
+        return post;
+    }
+
+    public void setPost(Post post) {
+        this.post = post;
+    }
+
+    public Comment getComment() {
+        return comment;
+    }
+
+    public void setComment(Comment comment) {
+        this.comment = comment;
     }
 }

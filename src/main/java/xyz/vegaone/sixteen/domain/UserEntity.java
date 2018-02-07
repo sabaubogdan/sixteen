@@ -30,6 +30,9 @@ public class UserEntity {
     @OneToMany(mappedBy = "userPost")
     private List<CommentEntity> commentList;
 
+    @OneToMany(mappedBy = "userLike")
+    private List<LikeEntity> likeList;
+
     //TODO How to connect users
 
     public Long getId() {
@@ -78,5 +81,29 @@ public class UserEntity {
 
     public void setPostEntityList(List<PostEntity> postList) {
         this.postList = postList;
+    }
+
+    public List<PostEntity> getPostList() {
+        return postList;
+    }
+
+    public void setPostList(List<PostEntity> postList) {
+        this.postList = postList;
+    }
+
+    public List<CommentEntity> getCommentList() {
+        return commentList;
+    }
+
+    public void setCommentList(List<CommentEntity> commentList) {
+        this.commentList = commentList;
+    }
+
+    public List<LikeEntity> getLikeList() {
+        return likeList;
+    }
+
+    public void setLikeList(List<LikeEntity> likeList) {
+        this.likeList = likeList;
     }
 }

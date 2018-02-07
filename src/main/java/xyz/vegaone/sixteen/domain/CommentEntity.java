@@ -2,6 +2,7 @@ package xyz.vegaone.sixteen.domain;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "comment")
@@ -26,8 +27,8 @@ public class CommentEntity {
     @Column(name = "content")
     private String content;
 
-    //TODO connect to like
-
+    @OneToMany(mappedBy = "commentLike")
+    private List<LikeEntity> likeList;
 
     public Long getId() {
         return id;
@@ -67,5 +68,13 @@ public class CommentEntity {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public List<LikeEntity> getLikeList() {
+        return likeList;
+    }
+
+    public void setLikeList(List<LikeEntity> likeList) {
+        this.likeList = likeList;
     }
 }
